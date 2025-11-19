@@ -1,0 +1,149 @@
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/static/Inter-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 引入 Bold (700) */
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/static/Inter-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/static/Inter-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-white: hsl(0, 0%, 100%);
+  --color-black: hsl(0, 0%, 0%);
+  --color-green: hsl(75, 94%, 57%);
+  --color-gray-900: hsl(0, 0%, 8%);
+  --color-gray-800: hsl(0, 0%, 12%);
+  --color-gray-700: hsl(0, 0%, 20%);
+
+  --text-title-semibold: 600 24px/150% "Inter", sans-serif;
+  --text-body-base: 400 14px/150% "Inter", sans-serif;
+  --text-body-bold: 700 14px/150% "Inter", sans-serif;
+
+  --spacing-50: 0.25rem; /* 4px */
+  --spacing-100: 0.5rem; /* 8px */
+  --spacing-150: 0.75rem; /* 12px */
+  --spacing-200: 1rem; /* 16px */
+  --spacing-300: 1.5rem; /* 24px */
+  --spacing-500: 2.5rem; /* 40px */
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0px;
+}
+
+body {
+  /* 如果不开启特定的抗锯齿设置，字体往往会显得略微发虚、变粗，视觉上就会觉得“宽”了 */
+  /* 针对 Chrome, Safari (Mac) */
+  -webkit-font-smoothing: antialiased;
+  /* 针对 Firefox (Mac) */
+  -moz-osx-font-smoothing: grayscale;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--color-gray-900);
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-500);
+  width: 100%;
+  max-width: 384px;
+  border-radius: 12px;
+  background-color: var(--color-gray-800);
+  gap: var(--spacing-300);
+}
+
+.avatar {
+  width: 88px;
+  height: 88px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-50);
+  text-align: center;
+}
+
+.name {
+  font: var(--text-title-semibold);
+  color: var(--color-white);
+}
+
+.location {
+  font: var(--text-body-bold);
+  color: var(--color-green);
+}
+
+.description {
+  font: var(--text-body-base);
+  color: var(--color-white);
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-200);
+  width: 100%;
+}
+
+.social-links > li {
+  width: 100%;
+}
+
+.social-links a {
+  display: block;
+  width: 100%;
+
+  font: var(--text-body-bold);
+  color: var(--color-white);
+  background-color: var(--color-gray-700);
+  text-decoration: none;
+
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+
+  /* 加上一点过渡动画让体验更好 */
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.social-links a:hover {
+  background-color: var(--color-green);
+  color: var(--color-black);
+  cursor: pointer;
+}
