@@ -283,3 +283,42 @@ img {
 .instructions ul li span {
   font: var(--text-preset5);
 }
+
+.nutrition {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-300);
+}
+
+.nutrition h2 {
+  font: var(--text-preset2);
+  color: var(--color-brown-800);
+}
+
+.nutrition p {
+  font: var(--text-preset4);
+  color: var(--color-stone-600);
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-150);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  padding: 0 var(--spacing-400);
+  gap: var(--spacing-200);
+
+  font: var(--text-preset4);
+  color: var(--color-stone-600);
+}
+
+.row .value {
+  font: var(--text-preset5);
+  color: var(--color-brown-800);
+}
