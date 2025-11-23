@@ -209,7 +209,7 @@ img {
   gap: var(--spacing-100);
 
   list-style-type: none;
-  padding-left: 8px;
+  padding-left: var(--spacing-100);
 }
 
 .ingredients li {
@@ -238,4 +238,48 @@ img {
 
   /* 极其重要：防止圆点被文字挤扁 */
   flex-shrink: 0;
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-300);
+}
+
+.instructions h2 {
+  font: var(--text-preset2);
+  color: var(--color-brown-800);
+}
+
+.instructions ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-100);
+
+  list-style: none; /* 禁用原生数字 */
+  counter-reset: step-counter; /* 创建一个叫 step-counter 的计数器 */
+}
+
+.instructions ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-200);
+  padding-left: var(--spacing-100);
+
+  font: var(--text-preset4);
+  color: var(--color-stone-600);
+}
+
+.instructions ul li::before {
+  counter-increment: step-counter;
+  content: counter(step-counter) ".";
+  width: 16px;
+
+  font: var(--text-preset5);
+  color: var(--color-brown-800);
+  flex-shrink: 0;
+}
+
+.instructions ul li span {
+  font: var(--text-preset5);
 }
