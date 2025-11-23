@@ -318,6 +318,11 @@ img {
   color: var(--color-stone-600);
 }
 
+.row > span {
+  /* 核心代码：让两个 span 平分父容器的宽度 */
+  flex: 1;
+}
+
 .row .value {
   font: var(--text-preset5);
   color: var(--color-brown-800);
