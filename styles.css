@@ -170,8 +170,57 @@ img {
   color: var(--color-stone-600);
 }
 
-/* 3. 使用 ::before 画出自定义圆点 */
+/* 使用 ::before 画出自定义圆点 */
 .preparation ul li::before {
+  content: ""; /* 必须有 content 才能显示 */
+  display: block;
+
+  /* 要求：大小 4px */
+  width: 4px;
+  height: 4px;
+  border-radius: 50%; /* 变成圆形 */
+
+  /* 颜色：使用你的主题色 */
+  background-color: var(--color-brown-800);
+
+  /* 关键计算：距离右边文字 32px（含自身4px） */
+  /* 计算公式：32px (总距离) - 4px (圆点宽度) = 28px (纯间距) */
+  margin-right: 28px;
+
+  /* 极其重要：防止圆点被文字挤扁 */
+  flex-shrink: 0;
+}
+
+.ingredients {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--spacing-300);
+}
+
+.ingredients h2 {
+  font: var(--text-preset2);
+  color: var(--color-brown-800);
+}
+
+.ingredients ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-100);
+
+  list-style-type: none;
+  padding-left: 8px;
+}
+
+.ingredients li {
+  display: flex;
+  align-items: center;
+  font: var(--text-preset4);
+  color: var(--color-stone-600);
+}
+
+/* 使用 ::before 画出自定义圆点 */
+.ingredients ul li::before {
   content: ""; /* 必须有 content 才能显示 */
   display: block;
 
