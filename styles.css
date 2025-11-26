@@ -80,7 +80,7 @@ body {
   min-height: 100vh;
 }
 
-article {
+.card {
   /* 当空间多的时候，会均分。当空间不够，则自动转成margin:0，这样不会超出父容器。*/
   margin: auto;
 
@@ -326,4 +326,31 @@ img {
 .row .value {
   font: var(--text-preset5);
   color: var(--color-brown-800);
+}
+
+@media (min-width: 768px) {
+  body {
+    background-color: var(--color-stone-100);
+  }
+  .card {
+    margin: auto;
+    border-radius: 24px;
+    max-width: 616px;
+    padding: var(--spacing-500);
+    gap: var(--spacing-500);
+    background-color: var(--color-white);
+  }
+
+  img {
+    height: 300px;
+    border-radius: 12px;
+  }
+
+  .content {
+    padding: 0px;
+  }
+
+  .header h1 {
+    font: var(--text-preset1);
+  }
 }
