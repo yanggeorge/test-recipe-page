@@ -60,7 +60,9 @@
 
 html,
 body {
-  height: 100%;
+  /* 已经写了 min-height: 100vh，这才是 Flexbox 垂直居中且允许滚动的正确做法。这样当内容变长时，body 会随之变长，padding-bottom 自然就会出现在页面的最底端。 */
+  /* 强制让 body 的高度等于浏览器的视口高度（屏幕高度）。 */
+  /* height: 100%; */
   font-family: "Outfit", sans-serif;
   letter-spacing: 0px;
 }
@@ -330,6 +332,7 @@ img {
 
 @media (min-width: 768px) {
   body {
+    padding: 128px 48px;
     background-color: var(--color-stone-100);
   }
   .card {
