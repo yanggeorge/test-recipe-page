@@ -132,6 +132,8 @@ img {
   width: 100%;
   height: 1px;
   background-color: var(--color-stone-150);
+  border: none;
+  margin: 0;
 }
 
 .preparation {
